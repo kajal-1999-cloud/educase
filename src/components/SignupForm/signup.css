@@ -1,0 +1,65 @@
+body {
+  bottom: 0;
+  /* margin: 0; */
+}
+.signup {
+  background-color: rgb(248, 246, 246);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  /* align-items: flex-end; */
+  width: 370px;
+  border: 1px solid rgb(185, 184, 184);
+  padding: 0 0.8rem;
+  margin: 0 auto;
+}
+.signup .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.signup button {
+  width: 95%;
+  height: 2.3rem;
+  margin: 0.8rem;
+  border: none;
+  cursor: pointer;
+}
+.signup .create {
+  background-color: rgb(100, 31, 226);
+  color: white;
+}
+
+.signup .input{
+    background-color: transparent;
+    border: 1px solid rgb(187, 183, 183);
+    width: 95%;
+    height: 1.8rem;
+    position: absolute;
+    z-index: 2;
+    top: 12px;
+
+}
+.signup .form .label{
+    position: absolute;
+    padding: 0 4px;
+    margin: 0 8px;
+    color: rgb(100, 31, 226);
+    background-color: rgb(248, 246, 246);
+    z-index: 3;
+}
+
+.form .radio label{
+    color: black;
+}
+
+.signup .form .input-container{
+    position: relative;
+}
+
+
+
+
+

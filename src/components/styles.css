@@ -1,0 +1,37 @@
+body{
+    bottom:0;
+    /* margin: 0; */
+}
+.homePage{
+    background-color: rgb(241, 241, 241);
+    display:flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: flex-end;
+    width: 370px;
+    border: 1px solid rgb(185, 184, 184);
+    padding: 0.8rem;
+    margin:0 auto;
+}
+.homePage .container{
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.homePage button{
+    width: 95%;
+    height: 2.3rem;
+    margin: .2rem;
+    border: none;
+    cursor: pointer;
+}
+.homePage .create{
+    background-color: rgb(100, 31, 226);
+    color: white;
+}
+.homePage .login{
+    background-color: rgb(188, 154, 250);
+}
+.homePage p{
+    font-size: 1.1rem;
+}

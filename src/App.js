@@ -1,8 +1,8 @@
 import { BrowserRouter as Router,Routes,  Route } from 'react-router-dom';
-import Home from './components/HomePage';
-import Login from './components/Login';
-import Signup from './components/CreateAcct';
-import Profile from './components/Profile';
+import Home from './components/Home/HomePage';
+import Login from './components/Login/Login';
+import Signup from './components/SignupForm/CreateAcct';
+import Profile from './components/profile/Profile';
 
 function App() {
   return (
@@ -10,9 +10,10 @@ function App() {
    <Router>
    <Routes>
           <Route exact path="/" Component={Home} />
-          <Route path="/about" Component={Login} />
-          <Route path="/contact" Component={Signup} />
-          <Route Component={Profile} /> {/* This route will be rendered if no other route matches */}
+          <Route path="/login" Component={Login} />
+          <Route path="/signup" Component={Signup} />
+          <Route path="/profile" Component={Profile} /> 
+          <Route Component={Profile} /> 
     </Routes>
    </Router>
     </div>
