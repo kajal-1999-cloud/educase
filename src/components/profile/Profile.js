@@ -1,25 +1,72 @@
-import React from 'react'
-import image from '../../assets/download (1).jpg'
-import "./profile.css"
+import React, { useEffect, useRef, useState } from "react";
+import image from "../../assets/download (1).jpg";
+import { FaCamera } from "react-icons/fa";
+
+import "./profile.css";
 function Profile() {
+  const fileRef = useRef(null);
+  const [profilePhoto, setProfilePhoto] = useState();
+  const [formData, setFormData] = useState({ name: "", email: "" });
+
+  useEffect(() => {
+    const storeEmail = JSON.parse(localStorage.getItem("email"));
+    const storeName = JSON.parse(localStorage.getItem("name"));
+    console.log("e", storeEmail, storeName);
+    setFormData({ name: storeName, email: storeEmail });
+  }, []);
+
+  const clickInput = () => {
+    fileRef.current.click();
+  };
+
+  function changePhotofunc(e) {
+    const file = e.target.files[0];
+    console.log(file);
+    const imageUrl = URL.createObjectURL(file);
+    setProfilePhoto(imageUrl);
+    console.log("hee", profilePhoto);
+    console.log("hee", imageUrl);
+  }
+  
   return (
-    <div className='profile'>
-
-        <div className='container'>
-        <div className='profileInfo' >
-        <div className='image'>
-        <img src={image} alt='img...'/>
-        <input type='file'></input>
+    <div className="profile">
+      <div className="container">
+        <div className="profileInfo">
+          <div className="image">
+            <div className="icons-input">
+              <FaCamera className="icon" onClick={clickInput} />
+              <input
+                type="file"
+                accept="image/*"
+                ref={fileRef}
+                onChange={(e) => changePhotofunc(e)}
+              />
+            </div>
+            {profilePhoto ? (
+              <img src={profilePhoto} alt="img..." />
+            ) : (
+              <img src={image} alt="img..." />
+            )}
+          </div>
+          <div className="info">
+            {formData && (
+              <div>
+                <h3>{formData.name}</h3>
+                <p>{formData.email}</p>
+              </div>
+            )}
+          </div>
         </div>
-      <div className='info'>
-      <p>name</p>
-        <p>email@gmail.com</p>
+        <div className="para">
+          {" "}
+          <p>
+            Lorem Ipsum is simply dummy text of the printing typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the
+          </p>
+        </div>
       </div>
-        </div>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-
-        </div>
     </div>
-  )
+  );
 }
-export default Profile
+export default Profile;

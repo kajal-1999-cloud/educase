@@ -15,7 +15,7 @@ function HomePage() {
           <button className="create">Create Account</button>
           <br></br>
         </Link>
-        <Link to="/login">
+        <Link to="/login" style={{textDecoration: "none"}}>
           <button className="login">Already Registered? Login</button>
         </Link>
       </div>

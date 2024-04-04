@@ -28,7 +28,12 @@
 }
 .homePage .login{
     background-color: rgb(188, 154, 250);
+    color: black;
+    padding-top: 10px;
 }
 .homePage p{
     font-size: 1.1rem;
+}
+Link{
+    text-decoration: none;
 }

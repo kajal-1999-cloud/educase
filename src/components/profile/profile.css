@@ -19,15 +19,46 @@ img{
 .profile .container{
     margin-bottom: 2rem;
     width: 100%;
+    border-bottom: 1px  dashed rgb(182, 180, 180);
 }
 
-.profile input{
-    display: none;
-}
 .profile .profileInfo{
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-between; */
+    align-items: start;
+   
 }
-.profile p{
-    font-size: 1.1rem;
+
+.profile input[type="file"]{
+    position: absolute;
+    margin-top: 10px;
+    visibility: hidden;
+}
+
+.image{
+    position: relative;
+}
+.profileInfo .info{
+    padding: 0px 10px;
+    line-height: 5px;
+}
+.profile .para{
+    font-size: 1rem;
+    padding: 2px;
+    margin-top: 18px;
+}
+.icons-input{
+    position: absolute;
+}
+.icon {
+    cursor: pointer;
+    top: 4.2rem;
+    margin-bottom: 0px;
+    left: 4.3rem;
+    position: absolute;
+    position: relative;
+    background-color: blueviolet;
+    color: white;
+    padding: 6px;
+    border-radius: 40%;
 }
