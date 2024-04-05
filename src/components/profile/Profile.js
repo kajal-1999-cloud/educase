@@ -27,7 +27,7 @@ function Profile() {
     console.log("hee", profilePhoto);
     console.log("hee", imageUrl);
   }
-  
+
   return (
     <div className="profile">
       <div className="container">
@@ -49,12 +49,18 @@ function Profile() {
             )}
           </div>
           <div className="info">
-            {formData && (
+            {formData ? (
               <div>
                 <h3>{formData.name}</h3>
                 <p>{formData.email}</p>
               </div>
-            )}
+            ) : (
+              <div>
+                 <h3>Mary Doe</h3>
+                <p></p>
+              </div>
+            )
+            }
           </div>
         </div>
         <div className="para">
